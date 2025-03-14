@@ -5,6 +5,7 @@
 int main(){
     struct dictionary d = create(5);
     add(&d,5,5);
+    rm(&d,5);
     free(d.keys);
     free(d.vals);
     return 0;

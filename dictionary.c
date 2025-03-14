@@ -32,7 +32,7 @@ int get(struct dictionary *d, int key){
         }
     }
 }
-void remove(struct dictionary *d, int key){
+void rm(struct dictionary *d, int key){
     for (size_t i = 0; i < d->size; i++)
     {
         if(d->keys[i]==key){
