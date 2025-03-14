@@ -40,6 +40,7 @@ void remove(struct dictionary *d, int key){
                 d->keys[e] = d->keys[e+1];
                 d->vals[e] = d->vals[e+1];
             }
+            
             d->keys = (int*) realloc(d->keys,(d->size+1)*sizeof(int));
             d->vals = (int*) realloc(d->keys,(d->size+1)*sizeof(int));
         }
