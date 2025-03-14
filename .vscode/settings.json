@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "dictionary.c": "cpp",
+        "stdio.h": "c",
+        "stdlib.h": "c"
+    }
+}
