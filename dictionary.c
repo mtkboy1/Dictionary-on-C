@@ -2,7 +2,7 @@
 #include <stdlib.h>
 struct dictionary
 {
-    int *keys;
+    char *keys;
     int *vals;
     int size; //element to add id
 };
@@ -17,14 +17,14 @@ struct dictionary create(){
     }
     return d;
 }
-void insert(struct dictionary *d, int key, int val){
+void insert(struct dictionary *d, char *key, int val){
     d->keys = (int*) realloc(d->keys,(d->size+1)*sizeof(int));
     d->vals = (int*) realloc(d->keys,(d->size+1)*sizeof(int));
     d->keys[d->size] = key; 
     d->vals[d->size] = val;
     printf("%i",d->size);
 }
-int get(struct dictionary *d, int key){
+int get(struct dictionary *d, char *key){
     for (size_t i = 0; i < d->size; i++)
     {
         if(d->keys[i]==key){
@@ -32,7 +32,7 @@ int get(struct dictionary *d, int key){
         }
     }
 }
-void rm(struct dictionary *d, int key){
+void rm(struct dictionary *d, char *key){
     for (size_t i = 0; i < d->size; i++)
     {
         if(d->keys[i]==key){
