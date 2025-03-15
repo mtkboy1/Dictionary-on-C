@@ -17,7 +17,7 @@ struct dictionary create(){
     }
     return d;
 }
-void add(struct dictionary *d, int key, int val){
+void insert(struct dictionary *d, int key, int val){
     d->keys = (int*) realloc(d->keys,(d->size+1)*sizeof(int));
     d->vals = (int*) realloc(d->keys,(d->size+1)*sizeof(int));
     d->keys[d->size] = key; 

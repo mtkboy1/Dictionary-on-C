@@ -6,7 +6,7 @@ struct dictionary;
 
 
 extern struct dictionary create();
-extern void add(struct dictionary *d, int key, int val);
+extern void insert(struct dictionary *d, int key, int val);
 extern int get(struct dictionary *d, int key);
 extern void rm(struct dictionary *d, int key);
 extern void doFree(struct dictionary *d);
